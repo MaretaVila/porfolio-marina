@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marina · Product Designer — Portfolio</title>
+<meta name="description" content="UX/UI Product Designer portfolio — e-commerce & SaaS">
+<style>
+:root{--bg:#fff;--text:#0b0c10;--muted:#52525b;--card:#fff;--border:#e5e7eb;--accent:#0ea5e9;--chip:#f4f4f5}
+.dark{--bg:#0b0c10;--text:#f4f4f5;--muted:#c4c4c7;--card:#0e1116;--border:#26272b;--accent:#38bdf8;--chip:#121418}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;background:var(--bg);color:var(--text)}
+.container{max-width:1120px;margin:0 auto;padding:0 16px}
+header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--border);background:color-mix(in oklab, var(--bg) 85%, transparent)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.nav a{padding:4px 6px;border-radius:8px;text-decoration:none;color:inherit}
+.nav a:hover{background:color-mix(in oklab, var(--border) 30%, transparent)}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:16px;padding:10px 14px;border:1px solid var(--border);background:var(--card)}
+.btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.hero{padding:56px 0 40px}
+.hero h1{font-size:clamp(28px,4.2vw,48px);line-height:1.1;margin:0 0 12px}
+.muted{color:var(--muted)}
+.pill{border:1px solid var(--border);background:var(--chip);padding:6px 10px;border-radius:999px;font-size:13px}
+.section{padding:40px 0;border-top:1px solid var(--border)}
+.grid{display:grid;gap:24px}
+.cards{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.card{border:1px solid var(--border);background:var(--card);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{aspect-ratio:16/9;background:linear-gradient(130deg,#e5f6ff,#c7e9fb 40%,#eaf6ff)}
+.dark .thumb{background:linear-gradient(130deg,#08222c,#0b3a49 40%, #0a2630)}
+.card-body{padding:14px}
+.chip{font-size:12px;padding:4px 8px;border-radius:999px;border:1px solid var(--border);background:var(--chip);color:var(--muted)}
+.card-footer{margin-top:auto;padding:12px 14px;text-align:right}
+h1,h2,h3{letter-spacing:-.02em}
+footer{padding:24px 0;color:var(--muted);display:flex;align-items:center;justify-content:space-between;font-size:14px}
+.box{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:16px}
+</style>
+<script>
+function setTheme(m){document.documentElement.classList.toggle('dark',m==='dark');
+  localStorage.setItem('theme',m);const l=document.getElementById('theme-label');
+  if(l) l.textContent = m==='dark'?'Light':'Dark';
+  const b=document.getElementById('theme-btn'); if(b) b.setAttribute('aria-pressed',m==='dark');
+}
+function initTheme(){setTheme(localStorage.getItem('theme')||'light')}
+document.addEventListener('DOMContentLoaded',initTheme);
+</script>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a href="./index.html"><strong>Marina</strong> · Product Designer</a>
+    <nav aria-label="Primary" style="display:flex;align-items:center;gap:16px">
+      <a href="./index.html#work">Work</a>
+      <a href="./index.html#about">About</a>
+      <a href="./index.html#contact">Contact</a>
+      <button id="theme-btn" class="btn" aria-label="Toggle dark mode" aria-pressed="false"
+        onclick="setTheme(document.documentElement.classList.contains('dark')?'light':'dark')">🌙 <span id="theme-label">Dark</span></button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section id="home" class="hero container">
+    <h1>Product designer crafting clear, conversion-focused experiences for <span style="color:var(--accent)">e-commerce</span> and <span style="color:var(--accent)">SaaS</span>.</h1>
+    <p class="muted" style="max-width:640px">I design interfaces that feel obvious, ship fast, and move metrics — with accessibility baked in.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+      <a class="btn btn-primary" href="#work">View 3 flagship cases →</a>
+      <a class="btn" href="#contact">Contact</a>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+      <span class="pill">Figma</span><span class="pill">Prototyping</span><span class="pill">Design systems</span><span class="pill">Accessibility (AA)</span>
+    </div>
+  </section>
+
+  <section id="work" class="section">
+    <div class="container">
+      <h2 style="margin:0 0 12px;font-size:clamp(22px,3.2vw,32px)">Selected work</h2>
+      <div class="grid cards">
+        <!-- TicketerApp -->
+        <article class="card">
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="card-body">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+              <h3 style="margin:0;font-size:18px">TicketerApp — Event ticketing flows</h3>
+              <span class="chip">Apps</span>
+            </div>
+            <p class="muted" style="margin:8px 0 0">Improved purchase clarity and reduced friction across search → select → pay.</p>
+          </div>
+          <div class="card-footer"><a class="muted" href="cases/ticketerapp.html">Read case →</a></div>
+        </article>
+        <!-- Monedero -->
+        <article class="card">
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="card-body">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+              <h3 style="margin:0;font-size:18px">Monedero — Simple personal wallet</h3>
+              <span class="chip">SaaS</span>
+            </div>
+            <p class="muted" style="margin:8px 0 0">Clear money-in/out tracking with safe actions and readable history.</p>
+          </div>
+          <div class="card-footer"><a class="muted" href="cases/monedero.html">Read case →</a></div>
+        </article>
+        <!-- Checkout -->
+        <article class="card">
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="card-body">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+              <h3 style="margin:0;font-size:18px">Frictionless Checkout</h3>
+              <span class="chip">E-commerce</span>
+            </div>
+            <p class="muted" style="margin:8px 0 0">Reduced steps and clarified errors in a modern checkout.</p>
+          </div>
+          <div class="card-footer"><a class="muted" href="cases/checkout.html">Read case →</a></div>
+        </article>
+        <!-- Billing -->
+        <article class="card">
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="card-body">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:8px">
+              <h3 style="margin:0;font-size:18px">SaaS Billing Settings</h3>
+              <span class="chip">SaaS</span>
+            </div>
+            <p class="muted" style="margin:8px 0 0">Safer plan changes and clearer invoices.</p>
+          </div>
+          <div class="card-footer"><a class="muted" href="cases/billing.html">Read case →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container" style="display:grid;grid-template-columns:1.2fr .8fr;gap:24px">
+      <div>
+        <h2 style="margin:0 0 8px;font-size:clamp(22px,3.2vw,32px)">About</h2>
+        <p class="muted" style="max-width:680px">I’m Marina, a UX/UI designer focused on product outcomes. I collaborate closely with engineers and content to ship fast, reusable patterns and accessible interfaces.</p>
+        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:16px">
+          <div class="box">
+            <h3 style="margin:0 0 6px;font-size:16px">Skills</h3>
+            <ul class="muted" style="margin:8px 0 0 18px;line-height:1.8">
+              <li>UX flows & IA</li><li>UI & Design systems</li><li>Rapid prototyping</li><li>Accessibility (AA)</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3 style="margin:0 0 6px;font-size:16px">Tools</h3>
+            <ul class="muted" style="margin:8px 0 0 18px;line-height:1.8">
+              <li>Figma (components, tokens)</li><li>Prototyping & testing</li><li>Handoff specs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div><div class="box" style="height:220px;display:flex;align-items:center;justify-content:center"><span class="muted">Photo / graphic placeholder</span></div></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="box" style="padding:24px;background:linear-gradient(180deg, color-mix(in oklab, var(--accent) 12%, var(--card)), var(--card))">
+        <h2 style="margin:0 0 8px;font-size:clamp(22px,3.2vw,32px)">Let’s work together</h2>
+        <p class="muted" style="max-width:640px">Reach out for roles in e-commerce, mobile apps, or SaaS.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+          <a class="btn btn-primary" href="mailto:hello@example.com">✉️ Email me</a>
+          <a class="btn" href="#" target="_blank" rel="noopener">in LinkedIn</a>
+        </div>
+      </div>
+      <footer style="margin-top:14px;display:flex;align-items:center;justify-content:space-between;color:var(--muted)">
+        <span>© <script>document.write(new Date().getFullYear())</script> Marina</span>
+        <div style="display:flex;gap:14px"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+      </footer>
+    </div>
+  </section>
+</main>
+</body>
+</html>
