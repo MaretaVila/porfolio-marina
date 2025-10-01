@@ -1,6 +1,63 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <style>
+/* ====== ABOUT ====== */
+#about .about__container{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 72px) 24px;
+  display: grid;
+  grid-template-columns: minmax(0,1.2fr) minmax(0,.8fr);
+  gap: clamp(20px, 4vw, 48px);
+  align-items: center;
+}
+
+#about .about__title{
+  margin: 0 0 12px 0;
+  font-size: clamp(40px, 10vw, 104px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+#about .about__para{
+  margin: 12px 0;
+  font-size: clamp(16px, 1.2vw, 18px);
+  line-height: 1.75;
+  color: #0f172a;
+  font-style: normal !important; /* por si hay cursiva global */
+}
+
+#about .about__meta{
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: grid;
+  gap: 6px;
+  font-size: 16px;
+}
+
+#about .about__media{ display: grid; place-items: center; }
+
+#about .about__photo{
+  width: min(520px, 78%);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  #about .about__container{ grid-template-columns: 1fr; }
+  #about .about__media{ order: 2; }
+  #about .about__text{ order: 1; }
+  #about .about__photo{ width: 68%; }
+}
+</style>
+
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Marina Vila· UX/UI Designer — Portfolio</title>
 <meta name="description" content="UX/UI Product Designer portfolio — e-commerce & SaaS">
@@ -121,7 +178,7 @@ document.addEventListener('DOMContentLoaded',initTheme);
     </div>
   </section>
 
-  <section id="about" class="section about">
+<section id="about" class="section about">
   <div class="about__container">
     <div class="about__text">
       <h2 class="about__title">About Me</h2>
@@ -133,8 +190,9 @@ document.addEventListener('DOMContentLoaded',initTheme);
       </p>
 
       <p class="about__para">
-        Before product design, <strong>I spent 10 years desining for government agencies and public universities</strong>
-        That background sharpened my ability to communicate complex ideas visually, collaborate cross-functionally, and build systems that
+        Before product design, <strong>I spent 9 years designing for Governant agancies and publi Universities</strong>
+        at Nickelodeon, Warner Bros, Disney, and Cartoon Network. That background sharpened my ability
+        to communicate complex ideas visually, collaborate cross-functionally, and build systems that
         feel purposeful and delightful.
       </p>
 
@@ -151,17 +209,18 @@ document.addEventListener('DOMContentLoaded',initTheme);
       </p>
 
       <ul class="about__meta">
-        <li>📍 Based in Spain, open to opportunities</li>
+        <li>📍 Based in Spain, open to opportunities in UE</li>
         <li>✉️ Let’s connect: <a href="mailto:mareta.ova@gmail.com">mareta.ova@gmail.com</a></li>
       </ul>
     </div>
 
-       <div class="about__media">
+    <div class="about__media">
       <!-- Cambia la ruta de la imagen por la tuya -->
       <img src="./desarrollador8.svg" alt="Portrait of Marina" class="about__photo" />
     </div>
   </div>
 </section>
+
 
 
   <section id="contact" class="section">
