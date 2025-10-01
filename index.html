@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <style>
+ <style>
 /* ====== ABOUT ====== */
 #about .about__container{
   max-width: 1120px;
@@ -14,18 +14,14 @@
 }
 
 #about .about__title{
-  margin: 0 0 12px 0;
-  font-size: clamp(40px, 10vw, 104px);
-  line-height: 1.02;
-  letter-spacing: -0.02em;
-  font-weight: 800;
+  margin: 0 0 12px 0;  /* hereda h2 global */
 }
 
 #about .about__para{
   margin: 12px 0;
   font-size: clamp(16px, 1.2vw, 18px);
   line-height: 1.75;
-  color: #0f172a;
+  color: var(--text);            /* ✅ dark mode */
   font-style: normal !important; /* por si hay cursiva global */
 }
 
@@ -36,7 +32,10 @@
   display: grid;
   gap: 6px;
   font-size: 16px;
+  color: var(--text);            /* ✅ dark mode */
 }
+
+#about .about__meta a{ color: inherit; }
 
 #about .about__media{ display: grid; place-items: center; }
 
@@ -56,7 +55,22 @@
   #about .about__text{ order: 1; }
   #about .about__photo{ width: 68%; }
 }
+
+   /* === Escala tipográfica global === */
+h1, h2, h3 { letter-spacing: -.02em; margin: 0 0 12px; }
+
+h1{
+  font-size: clamp(28px, 4.2vw, 48px);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+h2{
+  font-size: clamp(22px, 3.2vw, 32px);
+  line-height: 1.2
+
 </style>
+
 
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Marina Vila· UX/UI Designer — Portfolio</title>
@@ -115,12 +129,20 @@ document.addEventListener('DOMContentLoaded',initTheme);
 </header>
 
 <main id="main">
-  <section id="home" class="hero container">
-    <h1> I´m Marina, a UX/UI designer focused on product outcomes. I collaborate closely with engineers and content to ship fast, reusable patterns and accessible interfaces. <span style="color:var(--accent)"></span> <span style="color:var(--accent)"> I can create useful, intuitive, and engaging products.</span>.</h1>
-    <p class="muted" style="max-width:640px">With my varied background, I bring a unique set of skill sets and perspective into my work.<I design interfaces that feel obvious, ship fast, and move metrics — with accessibility baked in.</p>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
-        <span class="pill">Figma</span><span class="pill">Prototyping</span><span class="pill">Design systems</span><span class="pill">Accessibility (WCGA)</span>
-      </div>
+ <section id="home" class="hero container">
+  <h1>I’m Marina, a UX/UI designer focused on product outcomes. I collaborate closely with engineers and content to ship fast, reusable patterns and accessible interfaces. <span style="color:var(--accent)">I can create useful, intuitive, and engaging products.</span></h1>
+
+  <p class="muted" style="max-width:640px">
+    With my varied background, I bring a unique set of skill sets and perspective into my work.
+    I design interfaces that feel obvious, ship fast, and move metrics — with accessibility baked in.
+  </p>
+
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+    <span class="pill">Figma</span><span class="pill">Prototyping</span>
+    <span class="pill">Design systems</span><span class="pill">Accessibility (WCAG)</span>
+  </div>
+</section>
+
   </section>
   <section id="work" class="section">
     <div class="container">
@@ -190,7 +212,7 @@ document.addEventListener('DOMContentLoaded',initTheme);
       </p>
 
       <p class="about__para">
-        Before product design, <strong>I spent 9 years designing for Governant agancies and publi Universities</strong>
+        Before product design, <strong>I spent 9 years designing for Governant Agancies and Public Universities</strong>
         at Nickelodeon, Warner Bros, Disney, and Cartoon Network. That background sharpened my ability
         to communicate complex ideas visually, collaborate cross-functionally, and build systems that
         feel purposeful and delightful.
