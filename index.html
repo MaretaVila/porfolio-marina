@@ -59,20 +59,15 @@ document.addEventListener('DOMContentLoaded',initTheme);
 
 <main id="main">
   <section id="home" class="hero container">
-    <h1> I´m Marina, a UX/UI designer based in Spain. I have 10 years experience in user interfaces and product design.  <span style="color:var(--accent)"></span> I can help you build innovative digital products from UX research to UI design and prototyping. I can create useful, intuitive, and engaging products.<span style="color:var(--accent)"> </span>.</h1>
+    <h1> I´m Marina, a UX/UI designer focused on product outcomes. I collaborate closely with engineers and content to ship fast, reusable patterns and accessible interfaces. <span style="color:var(--accent)"></span> <span style="color:var(--accent)"> I can create useful, intuitive, and engaging products.</span>.</h1>
     <p class="muted" style="max-width:640px">With my varied background, I bring a unique set of skill sets and perspective into my work.<I design interfaces that feel obvious, ship fast, and move metrics — with accessibility baked in.</p>
-    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
-      <a class="btn btn-primary" href="#work">View 3 flagship cases →</a>
-      <a class="btn" href="#contact">Contact</a>
-    </div>
-    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
-      <span class="pill">Figma</span><span class="pill">Prototyping</span><span class="pill">Design systems</span><span class="pill">Accessibility (AA)</span>
-    </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+        <span class="pill">Figma</span><span class="pill">Prototyping</span><span class="pill">Design systems</span><span class="pill">Accessibility (WCGA)</span>
+      </div>
   </section>
-
   <section id="work" class="section">
     <div class="container">
-      <h2 style="margin:0 0 12px;font-size:clamp(22px,3.2vw,32px)">Selected work</h2>
+      <h2 style="margin:0 0 12px;font-size:clamp(22px,3.2vw,32px)">Futured projects</h2>
       <div class="grid cards">
         <!-- TicketerApp -->
         <article class="card">
@@ -126,29 +121,48 @@ document.addEventListener('DOMContentLoaded',initTheme);
     </div>
   </section>
 
-  <section id="about" class="section">
-    <div class="container" style="display:grid;grid-template-columns:1.2fr .8fr;gap:24px">
-      <div>
-        <h2 style="margin:0 0 8px;font-size:clamp(22px,3.2vw,32px)">About</h2>
-        <p class="muted" style="max-width:680px">I’m Marina, a UX/UI designer focused on product outcomes. I collaborate closely with engineers and content to ship fast, reusable patterns and accessible interfaces.</p>
-        <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:16px">
-          <div class="box">
-            <h3 style="margin:0 0 6px;font-size:16px">Skills</h3>
-            <ul class="muted" style="margin:8px 0 0 18px;line-height:1.8">
-              <li>UX flows & IA</li><li>UI & Design systems</li><li>Rapid prototyping</li><li>Accessibility (AA)</li>
-            </ul>
-          </div>
-          <div class="box">
-            <h3 style="margin:0 0 6px;font-size:16px">Tools</h3>
-            <ul class="muted" style="margin:8px 0 0 18px;line-height:1.8">
-              <li>Figma (components, tokens)</li><li>Prototyping & testing</li><li>Handoff specs</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div><div class="box" style="height:220px;display:flex;align-items:center;justify-content:center"><span class="muted">Photo / graphic placeholder</span></div></div>
+  <section id="about" class="section about">
+  <div class="about__container">
+    <div class="about__text">
+      <h2 class="about__title">About Me</h2>
+
+      <p class="about__para">
+        I design intuitive, human-centered products by combining
+        <strong>a decade of visual storytelling experience</strong>
+        with research-driven UX strategy.
+      </p>
+
+      <p class="about__para">
+        Before product design, <strong>I spent 10 years desining for government agencies and public universities</strong>
+        That background sharpened my ability to communicate complex ideas visually, collaborate cross-functionally, and build systems that
+        feel purposeful and delightful.
+      </p>
+
+      <p class="about__para">
+        Now I bring that same strategic eye to crafting digital experiences that are
+        <strong>not just functional, but meaningful.</strong>
+        I specialize in research synthesis, UX flows, and information architecture, grounded in a deep
+        understanding of human behavior and story.
+      </p>
+
+      <p class="about__para">
+        I use design to <strong>thoughtfully consider every angle</strong> — business, ethics, innovation,
+        and human connection — to create products that make life better.
+      </p>
+
+      <ul class="about__meta">
+        <li>📍 Based in Spain, open to opportunities</li>
+        <li>✉️ Let’s connect: <a href="mailto:mareta.ova@gmail.com">mareta.ova@gmail.com</a></li>
+      </ul>
     </div>
-  </section>
+
+       <div class="about__media">
+      <!-- Cambia la ruta de la imagen por la tuya -->
+      <img src="./img/marina.jpg" alt="Portrait of Marina" class="about__photo" />
+    </div>
+  </div>
+</section>
+
 
   <section id="contact" class="section">
     <div class="container">
